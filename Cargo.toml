@@ -1,0 +1,25 @@
+[package]
+name = "v4-4"
+version = "0.1.0"
+authors = ["decentclock <decentclock.5uh2k@slmail.me>"]
+edition = "2018"
+resolver = "2"
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+[features]
+pio = ["esp-idf-sys/pio"]
+
+[dependencies]
+esp-idf-sys = { version = "0.31.6", features = ["binstart"] }
+secp256k1 = { version = "0.23.3", features = ["lowmemory"] }
+
+
+[build-dependencies]
+embuild = "0.29"
+anyhow = "1"
