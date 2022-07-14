@@ -17,7 +17,7 @@ pio = ["esp-idf-sys/pio"]
 
 [dependencies]
 esp-idf-sys = { version = "0.31.6", features = ["binstart"] }
-secp256k1 = { version = "0.22.1", features = ["lowmemory"] }
+secp256k1 = { version = "0.22.0", features = ["lowmemory"] }
 
 
 [build-dependencies]
